@@ -23,6 +23,6 @@
 ## Section 1. Introduction to Java
 * What is Java?
 * Language, JVM, JRE, Specification, Implementation, and API
-* A Brief history of Java
+* A brief history of Java
 
 
