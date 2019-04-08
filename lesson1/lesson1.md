@@ -1,6 +1,6 @@
 # Lesson 1
 
-## Section 0. Puesta a punto Entorno de desarrollo
+## Section 0. Configuring Development Environment
 * Installing [Java 11](https://adoptopenjdk.net/) 
   * Download
   * Extract
@@ -15,14 +15,14 @@
 * Creatting a project workspace
 * Create a GitHub account
 * Installing git client
-* For the impatien
+* For the impatient
   * A little taste of Java with JShell
   * JShell. See [Oracle Doc](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm#JSHEL-GUID-630F27C8-1195-4989-9F6B-2C51D46F52C8) or my [presentation](https://slides.com/augustojimenez/jshell#/) about JShell at the JVMMX Meetup.
 
 
 ## Section 1. Introduction to Java
 * What is Java?
-* Language, JVM, JRE, Specification, Implementation and API
-* Brief history of Java
+* Language, JVM, JRE, Specification, Implementation, and API
+* A Brief history of Java
 
 
