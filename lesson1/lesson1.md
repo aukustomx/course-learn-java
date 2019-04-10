@@ -6,7 +6,7 @@
   * Extract
   * Setting JAVA_HOME
   * Export JAVA_HOME to PATH
-* Installing [Maven 3.6.0](https://maven.apache.org/download.cgi)
+* Installing [Maven 3.6.0](https://maven.apache.org/download.cgi). [Download link](https://www-eu.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz)
   * Download
   * Extract
   * Setting M2_HOME
