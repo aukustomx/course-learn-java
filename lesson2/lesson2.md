@@ -77,16 +77,17 @@ En Java exiten 8 [tipos de datos primitivos](https://docs.oracle.com/javase/tuto
 1. long
 1. float
 1. double
+
 Type| Contains |	Default	  |Size |	Range
----|---|---|---
+---|---|---|---|---
 boolean|	true or false|	false|	1 bit|	NA
 char|	Unicode character|	\u0000|	16 bits|	\u0000 to \uFFFF
 byte|	Signed integer|	0|	8 bits|	-128 to 127
 short|	Signed integer|	0|	16 bits|	-32768 to 32767
 int|	Signed integer|	0|	32 bits|	-2147483648 to 2147483647
 long|	Signed integer|	0|	64 bits|-9223372036854775808 to 9223372036854775807
-float| IEEE 754| floating point |0.0	|32 bits| ±1.4E-45 to ±3.4028235E+38
-double | IEEE 754| floating point|  0.0|	64 bits| ±4.9E-324 to ±1.7976931348623157E+308
+float| IEEE 754 floating point |0.0	|32 bits| ±1.4E-45 to ±3.4028235E+38
+double | IEEE 754 floating point|  0.0|	64 bits| ±4.9E-324 to ±1.7976931348623157E+308
 
 
 ## Expresiones y operadores
