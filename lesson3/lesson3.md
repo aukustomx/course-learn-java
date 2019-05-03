@@ -66,10 +66,10 @@ if (time < 10) {
 ```
 
 Ejercicio que reúne lo visto en clase:
-Agregar un atributo `age` a la clase Cat.java que indique la edad en meses de un gato. Al igual que name y color, age se recibirá de la línea de comandos. En el método main se creará una instancia de tipo Cat y sus atributos tomarán los valores recibidos de la línea de comandos. Tras imprimir los tres atributos del objeto Cat creado, se imprimirá un mensaje en pantalla que indique si el gato es un cachorro, es jóven o adulto de acuerdo a:
-- age < 4 meses: Michu es un cachorro
-- age >= 4 meses pero < 12 meses: Michu es un jovenazo
-- age >= 12 meses: Michu es un gato adulto.
+Agregar un atributo `age` a la clase `Cat.java` que indique la edad en meses de un gato. Al igual que `name` y `color`, `age` se recibirá de la línea de comandos. En el método `main` se creará una instancia de tipo `Cat` y sus atributos tomarán los valores recibidos de la línea de comandos. Tras imprimir los tres atributos del objeto `Cat` creado, se imprimirá un mensaje en pantalla que indique si el gato es un cachorro, es jóven o adulto de acuerdo a:
+- `age < 4` meses: Michu es un cachorro
+- `age >= 4` meses pero `age < 12` meses: Michu es un jovenazo
+- `age >= 12` meses: Michu es un gato adulto.
 
 Finalmente, si solo se requiere ejecutar una sentencia (además corta) tanto para el `if` como para el `else` podemos utilizar el operador ternario:
 `variable = (condition) ? expressionTrue : expressionFalse;`
@@ -85,6 +85,6 @@ System.out.println(result);
 
 ## while statement
 
-## do ...while statement
+## do ... while statement
 
 ## for loop
