@@ -156,7 +156,21 @@ Ejercicio:
 * Crear e inicializar el arreglo
 * Acceder elementos en el arreglo
 
+# Reading command line arguments
+Es un argumento de linea de comandos aquel que es pasado a un programa Java cuando se ejecuta. Recordemos el programa Cat. Supongamos que queremos establecer el nombre y el color un objeto Cat con los parámetros recibidos en la línea de comandos como sigue:
+`java Cat Michu Negro`
 
+Si seguimos recordando el programa Cat, definimos un método `main` que funciona como el punto de entrada a nuestro programa; Java busca este métod y comienza a ejecutar las sentencias que están dentro del cuerpo de este método. `main` recibe un arreglo de `String`s como parámetro. Si ningún parámetro es pasado al programa por la línea de comandos, la longitud del arreglo de parámetros es 0.
+
+Antes de hacer que el programa Cat reciba 2 parámetros, los use para definir el nombre y el color del gato e imprima sus valores en la pantalla, vamos a resolver algunos ejercicios:
+* Escribir un programa que reciba un nombre propio e imprima en la pantalla "Hola, aquí-va-el-nombre-como-parámetro!", por ejemplo:
+`PrintName Juan` debe imprimir
+`Hola, Juan!`
+
+* Escribir un programa que reciba 2 números enteros, los sume, e imprima: "El resultado de sumar x1 más x2 es igual a aquí-va-el-resultado-de-la-suma"
+Recuerden, los arreglos comienzan en 0 y se acceden de la forma nombreArreglo[0], nombreArreglo[1] y así sucesivamente.
+
+* Ahora sím es momento de implementar el programa Cat para que lea dos parámetros de la línea de comandos, asigne dichos parámetros al nombre y el color del gato y finalmente imprima los atributos del gato en la pantalla.
 
 ## Tarea
 Leer las siguientes secciones de la documentación de Oracle acerca de Operadores, y Expresiones, sentencias y bloques. Tema principal y subtemas. La siguiente clase habrá preguntas de las lecturas.
