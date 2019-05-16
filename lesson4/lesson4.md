@@ -15,8 +15,8 @@ Si utilizas esta forma de declaración del ciclo for, recuerda que:
 Ejemplo. Imprimir los números del 1 al 10. Para lograrlo, definimos la clase `OneToTen.java` con el siguiente código
 ```java
 class OneToTen {
-    public static void main(String[] args){
-        for(int i=1; i<11; i++){
+    public static void main(String[] args) {
+        for(int i = 1; i < 11; i++) {
             System.out.println(i);
         }
     }
