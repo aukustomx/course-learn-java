@@ -91,7 +91,7 @@ class BreakFor {
 ```
 
 ## switch
-La sentencia `switch` puede tener varias posibles rutas de ejecución. Un `switch`trabaja con los tipos de datos primitivos byte, short, char e int. Además, trabaja con tipos de datos enumerados, con la clase String y con algunas clases especiales wrapper de primitivos: Character, Byte, Short a Integer.
+La sentencia `switch` puede tener varias posibles rutas de ejecución. Un `switch`trabaja con los tipos de datos primitivos `byte`, `short`, `char` e `int`. Además, trabaja con tipos de datos *enumerados*, con la clase `String` y con algunas clases especiales *wrapper* de primitivos: `Character`, `Byte`, `Short` e `Integer`.
 
 Ejemplo. Supongamos que queremos determinar el nombre del mes de acuerdo a un número de més recibido:
 ```java
@@ -122,11 +122,37 @@ public static void main(String[] args) {
 }
 ...
 ```
-El cuerpo de una sentencia switch se conoce como switch block. Un switch block puede ser etiquetado con uno o más etiquetas case o default. La sentencia switch evalua su expresión, y ejecuta todas las sentencias que corresponden a la etiqueta que cumple la condición. ¿Cómo resolverías este ejemplo usando if-else-if? Complicado, no lo crees.
+El cuerpo de una sentencia switch se conoce como *switch block*. Un *switch block* puede ser etiquetado con uno o más etiquetas `case` o `default`. La sentencia `switch` evalua su expresión, y ejecuta todas las sentencias que corresponden a la etiqueta que cumple la condición. ¿Cómo resolverías este ejemplo usando `if-else-if`? Complicado, no lo crees.
 
-Como se puede observar, en este caso, cada switch block contiene una sentencia break, que se encarga de cerrar el bloque del case y que regresa el control del flujo a la primera sentencia después del switch. Si una sentencia break no acompaña a cada bloque, a partir de aquel case que se cumpla, todos los bloques de los demás `case`s se ejecutan en *fall through*. ¿Puedes comprobralo?. Aunque no es requerido, es recomendable utilizar un break en cada case.
+Como se puede observar, en este caso, cada `switch block` contiene una sentencia `break`, que se encarga de cerrar el bloque del `case` y que regresa el control del flujo a la primera sentencia después del switch. Si una sentencia `break` no acompaña a cada bloque, a partir de aquel case que se cumpla, todos los bloques de los demás `case`s se ejecutan en *fall through*. ¿Puedes comprobralo?. Aunque no es requerido, es recomendable utilizar un `break` en cada `case`.
 
 ## while
+La sentencia `while` ejecuta un bloque de código mientras una condicion (boolean) resuelve a `true`. Su sintaxis es la siguiente:
+```java
+    while(expression) {
+    	//statement(s)
+    }
+```
+El ciclo `while`, como también se le conoce, termina cuando la expresión evalúa a `false`. 
+
+Ejemplo. Cómo imprimir los números del 1 al 10 usando una sentencia `while`:
+```java
+public static void main(String[] args){
+    int count = 1;
+    while (count < 11) {
+        System.out.println("Count is: " + count);
+        count++;
+    }
+}
+```
 
 ## do ... while
+Además del ciclo `while`, Java nos provee de un ciclo `do-while`, que puede expresarse como sigue:
+```java
+do {
+     statement(s)
+} while (expression);
+```
+La diferencia principal entre `while` y `do-while`, es que este último evalúa la expresión al final del bloque de sentencias y garantiza que las sentencias de dicho bloque se ejecutan al menos una vez.
 
+Puedes revisar y probar el código en la clase `WhileDoWhile.java` para ver el comportamiento de ambas sentencias.
