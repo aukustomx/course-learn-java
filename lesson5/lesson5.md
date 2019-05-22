@@ -1,4 +1,4 @@
-#Object Oriented Programming
+# Object Oriented Programming
 
 En esta lección cubriremos la parte teórica del paradigma de Programación Orientada a Objetos, y seguidamente, con el conocimiento del lenguaje Java que has adquirido a lo largo de las lecciones anteriores, implementaremos OOP con Java.
 
@@ -13,12 +13,12 @@ En esta lección cubriremos la parte teórica del paradigma de Programación Ori
 ![Software Object](https://docs.oracle.com/javase/tutorial/figures/java/concepts-object.gif)
 ![Bike as Software Object](https://docs.oracle.com/javase/tutorial/figures/java/concepts-bicycleObject.gif)
 
-* En los *software objects* es estado de los mismos se guarda en *fields* (campos) y exponen su comportamiento a través de *methods* (métodos). Son los *methods* los que operan en el estado interno de los objetos y sirven como mecanismo de comunicación entre objetos.
+* En los *software objects* el estado de los mismos se guarda en *campos* (fields) y exponen su comportamiento a través de *métodos* (methods). Son los *métodos* los que operan en el estado interno de los objetos y sirven como mecanismo de comunicación entre objetos.
 
 ## Encapsulamiento 
-* Ocultar el estado interno de los objetos y obligar a que toda la comunicación entre objetos suceda a través de sus métodos se conoce como *encapsulation* (encapsulamiento). 
+* Ocultar el estado interno de los objetos y obligar a que toda la comunicación entre ellos suceda a través de sus métodos, se conoce como *encapsulamiento* (encapsulation). 
 * El encapsulamiento es también un concepto clave de la Programación Orientada a Objetos.
-* Un objeto `bicicleta` expone un método `subirCambioVelocidad()`, y para hacerlo, no expone el estado interno o el detalle de cómo lo hace (qué material de cadena, velocidad actual, posición de cambio actual, etc). 
+* Un objeto `bicicleta` expone un método `subirCambioVelocidad()`, y para hacerlo no expone el estado interno o el detalle de cómo lo hace (qué material de cadena, velocidad actual, posición de cambio actual, etc). 
 * Para interactuar con el mundo exterior, el objeto `bicicleta` expone solo métodos y es el mismo objeto el que tiene el control de cómo objetos externos pueden interactuar con él.
 
 ## Beneficios de programar con objetos
@@ -28,10 +28,11 @@ En esta lección cubriremos la parte teórica del paradigma de Programación Ori
 * Fácil extensibilidad y depuración. Si un objeto no funciona, reemplázalo por otro. Una analogía puede ser una pieza mecánica.
 
 ## Clases
-A nuestro alrededor o en el mundo real podemos distinguir que existen objetos que pueden considerarse del mismo tipo, podemos clasificarlos como algo general.En OOP, a esta clasificación general podría llamarse Clase.
+A nuestro alrededor o en el mundo real podemos distinguir que existen objetos que pueden considerarse del mismo tipo, podemos clasificarlos como algo general. En OOP, a esta clasificación general podría llamarse Clase.
 
-## Clases
+## Clases e instancias de clase
 Ahora, si como ejemplo pensamos en objetos tales como Automóvil, Bicicleta, Autobús, Barco, podríamos llamarlos a todos *Vehículos*. Si de estos elegimos el tipo de objeto Automóvil, y pensamos en un modelo en particular de coche (Ford Focus, por ejemplo) caemos en la cuenta que existen miles de estos autos. Misma marca, mismas características, mismo funcionamiento, mismos componentes, etc.
+
 ![Flotilla autos](https://hertzmexico.com/public/img/principales/venta-flota-autos.jpg) 
 
 En términos de OOP, estos miles de autos de iguales características son *Instancias* de la *clase de objetos* `Automóvil`.
@@ -51,16 +52,17 @@ En términos de OOP, estos miles de autos de iguales características son *Insta
 * La cantidad de asientos en un auto compacto es diferente de los de un autobús; el sistema de suspensión es distinto, el compartimento de maletas aparece en un autobus y no en un utilitario.
 * En OOP, se permite que las clases *hereden* estado y comportamiento de otras clases. Por lo que surge el concepto de *superclase* y *subclase* (superclass, subclass, respectivamente).
 * Automóvil se convierte en una superclase y utilitario, compacto y autobús en subclases de Automóvil.
-![Car inheritance](https://www.techoschool.com/Images/dotnet_inheritance.jpg)
+
 ![Car inheritance2](http://testingpool.com/wp-content/uploads/2015/08/Car-model.png)
+
 * Implementemos subclases. Utilizar la palabra reservada `extends` para heredar entre clases.
 
 ## Intefaces
-* Imagina qué sucede cuándo usas el control remoto para cambiar de canal el televisor o para subir y bajar volúmen. Los botones implicado en el control remoto son la interface entre ti y los componentes electrónicos del televisor. El televisor expone su funcionalidad a través de la interface "control remoto", específicamente, "los botones".
+* Imagina qué sucede cuándo usas el control remoto para cambiar de canal el televisor o para subir y bajar volúmen. Los botones implicados en el control remoto son la *interface* entre ti y los componentes electrónicos del televisor.
 * Los métodos de los objetos son su interface (API) con el mundo exterior.
 * En Java, una interface es la definición de los métodos (el comportamiento) que objetos de cierto clase tendrá o expondrá.
 * La interface no es el comportamiento como tal, es el contrato  de todo lo que un objeto debe hacer para poder ser llamado como se llama la interface.
-* Implementemos una interface Vehículo, donde definamos (ojo, solo definir) que comportamiento deben tener todas aquellas clases que quieran ser tratadas como un Vehículo.
+* Implementemos una interface Vehículo, donde definamos (ojo, solo definir) qué comportamiento deben tener todas aquellas clases que quieran ser tratadas como un Vehículo.
 
 ## Paquetes
 * Por último, pero no menos importante, revisaremos el tema de paquetes (`package`s) en Java. 
