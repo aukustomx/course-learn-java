@@ -1,8 +1,8 @@
 package com.bbva.employee;
 
-public class PepsicoEmployee extends Employee {
+public class SodasEmployee extends Employee {
 
-    public PepsicoEmployee(int aBonus) {
+    public SodasEmployee(int aBonus) {
         super(aBonus);
     }
 
