@@ -1,4 +1,4 @@
-# Polimorfismo; Arquetipos maven
+# Polimorfismo
 
 La definición de *polimorfismo* *(del griego: πολύ «poli» = muchos, y μορφή «morfé» = **forma**, figura)* se refiere a un principio de la biología en el cual un organismo o especie puede tener diferentes formas o estapas. 
 
@@ -77,3 +77,53 @@ La solución que el polimorfismo ofrece para este problema es la siguiente:
 En lugar de tener un método para cada subtipo, implementamos un único método con el supertipo y esto nos permite reutilización de código, facilidad de mantenimiento y extensibilidad, es decir, que si se generan nuevos subtipos de la clase Employee, este método está preparado para soportarlos.
 
 Un punto importante a observar en este ejemplo, es que la Java virtual machine (JVM) llama al método apropiado en el objeto correspondiente al que se refiere cada variable. Por lo tanto, la JVM no llama el método definido de acuerdo al tipo de variable. Este comportamiento se llama *virtual method invocation* y demuestra un aspecto de la importancia del polimorfismo en el lenguaje Java.
+
+# Arquetipos maven
+
+Siendo breves, un Arquetipo (Archetype) es una herramienta de plantilla de proyecto. Un arquetipo está definido como un *patrón original* o *modelo del cual se hacen otras cosas del mismo tipo*. Es una forma de generar de forma consistente proyectos Maven.
+
+Los arquetipos permiten a los desarrolladores inicien un proyecto de forma rápida, de forma consistente, y con las mejores prácticas implementadas por la organización autora del arquetipo.
+
+Para crear un proyeto Meven con el arquetipo (plantilla) llamada `maven-archetype-quickstart` ejecutamos el siguiente comando:
+
+```bash
+$ mvn archetype:generate \
+> -DarchetypeGroupId=org.apache.maven.archetypes \
+> -DarchetypeArtifactId=maven-archetype-quickstart \
+> -DarchetypeVersion=1.4 \
+> -DgroupId=com.mycompany \
+> -DartifactId=my-project \
+> -Dversion=1.0 \
+> -DinteractiveMode=false
+```
+La línea `mvn archetype:generate` le indica a maven que lo que quieres es generar un proyecto a partir de un arquetipo.
+
+`-DarchetypeGroupId=org.apache.maven.archetypes` define el groupId del arquetipo deseado. Esto es algo así como la marca de los artefactos que se generan. En este caso, se puede ver que este arquetipo le pertenece a la empresa apache.
+
+La siguiente línea es `-DarchetypeArtifactId=maven-archetype-quickstart` y es el nombre del artefacto. Seguramente apache genera cientos de miles de artefactos de software y a cada uno le pone un nombre. Nosotros como desarrolladores pondremos nombre al software que desarollemos. 
+
+En cuanto al arquetipo se refiere, tenemos finalmente que establecer qué versión del mismo queremos, en este caso indicamos que usaremos la versión 1.4 del arquetipo como `-DarchetypeVersion=1.4`.
+
+Las líneas restantes del comando se refieren a nuestro componente de software *per se*. En el ejemplo, se genera un proyecto que pertence a la compañía `mycompany` (`-DgroupId=com.mycompany`), el nombre de nuestro artefacto o componente de software será `my-project` (`-DartifactId=my-project`) y la versión será la 1.0 (`-Dversion=1.0`).
+
+`-DinteractiveMode=false` es un modo en el que Maven va preguntándonos y nosotros constestando los datos que acabamos de revisar. Pero como ya definimos esta información en el mismo comando, le instruímos a Maven que cree el proyecto en modo batch, en decir, sin preguntarnos.
+
+El comando anterior genera un proyecto Java con la siguiente estructura:
+```bash
+my-project/
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── com
+    │           └── bbva
+    │               └── App.java
+    └── test
+        └── java
+            └── com
+                └── bbva
+                    └── AppTest.java
+
+9 directories, 3 files
+
+```
