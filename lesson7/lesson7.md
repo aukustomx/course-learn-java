@@ -26,7 +26,7 @@ public void printFileLines(String fileFullPath) {
     Files.readAllLines(path).forEach(System.out::println)
 }
 ```
-### Leer un pequeño archivo a la Java 7+ way
+### Leer un archivo grande a la Java 7+ way
 Ahora veamos cómo leer un archivo grande.
 
 ```java
