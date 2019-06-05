@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dashboardreport name="E2ELoadTestOverviewCPU2" version="7.0.35.1009" reportdate="2019-01-29T08:45:29.249-06:00" description="">
+    <source name="ASO">
+        <filters summary="Host 'lvmmxcasjbnp06', Web Request, Agent 'ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10' plus correlating Agents, from yesterday 16:04 to yesterday 16:52">
+            <filter>hf:Host?lvmmxcasjbnp06</filter>
+            <filter>ag:selectedAgents?ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06</filter>
+            <filter>tf:CustomTimeframe?1548713057553:1548715978269</filter>
+        </filters>
+    </source>
+    <reportheader>
+        <reportdetails>
+            <user>octausr</user>
+        </reportdetails>
+    </reportheader>
+    <data>
+        <taggedwebrequestsdashlet name="Tagged Web Requests" description="" displaysource="Base">
+            <taggedwebrequests structuretype="table">
+                <taggedwebrequest platform="Java" timername="GetBusinessAgent" count="834" avg="409.9110214197807"
+                                  cpu_avg="42.286165406663926" scriptname="REQ000009418303_f56a270"
+                                  testname="REQ000009418303_f56a270_1072cb1_STRESS" error_state="OK"
+                                  failure_rate="0.0"/>
+            </taggedwebrequests>
+        </taggedwebrequestsdashlet>
+        <databasedashlet name="Database" description="" displaysource="Base">
+            <database_topresponsetimes structuretype="tree">
+                <database_topresponsetime dbsource_pool="MGjbmx@127.0.0.1:BQSRV001_MX (default)" count="834" exec_avg="9.143471818908656" exec_min="1.0691020041704178" exec_max="854.3280029967427" exec_sum="7625.655496969819" response_time_per_transaction="9.143471818908656" executions_per_transaction="1.0" failure_rate="0.0">
+                    <database_topresponsetime
+                            dbsource_pool="BQSRV001_MX.C_QSRV_OPE_28.insertOne({ ? }) using ACKNOWLEDGED" count="834"
+                            exec_avg="9.143471818908656" exec_min="1.0691020041704178" exec_max="854.3280029967427"
+                            exec_sum="7625.655496969819" response_time_per_transaction="9.143471818908656"
+                            executions_per_transaction="1.0" failure_rate="0.0" roundtrips="834"/>
+                </database_topresponsetime>
+                <database_topresponsetime dbsource_pool="Database" count="0"
+                                          response_time_per_transaction="2.2310516610920286"
+                                          executions_per_transaction="0.0"
+                                          pool_wait_time_per_transaction="2.2310516610920286" failure_rate="0.0"/>
+                <database_topresponsetime dbsource_pool="zapxmpmv@150.100.47.94:bmtnzx02 (ORA_BMTNZX02)" count="912" exec_avg="0.4665285639399499" exec_min="0.21561402082443237" exec_max="8.474153012037277" exec_sum="425.47405031323433" response_time_per_transaction="0.5290307163548984" executions_per_transaction="1.0935251798561152" failure_rate="0.0">
+                    <database_topresponsetime dbsource_pool="(no SQL statement detected, discovery run missing?)"
+                                              count="446" exec_avg="0.48148338570188515" exec_min="0.25004899501800537"
+                                              exec_max="8.40301501750946" exec_sum="214.74159002304077"
+                                              response_time_per_transaction="0.2574839208909362"
+                                              executions_per_transaction="0.5347721822541966" failure_rate="0.0"/>
+                    <database_topresponsetime
+                            dbsource_pool="SELECT PM246_DESCRIPCION FROM AMPMV.PMDT246 WHERE PM246_CVE_TIPO = ? AND PM246_CVE_SUBTIPO = ?"
+                            count="466" exec_avg="0.45221558002187456" exec_min="0.21561402082443237"
+                            exec_max="8.474153012037277" exec_sum="210.73246029019356"
+                            response_time_per_transaction="0.2715467954639622"
+                            executions_per_transaction="0.5587529976019184" failure_rate="0.0"/>
+                </database_topresponsetime>
+                <database_topresponsetime dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (OracleXADataSource)" count="105" exec_avg="13.938352030231838" exec_min="0.3188779950141907" exec_max="37.5575670003891" exec_sum="1463.526963174343" response_time_per_transaction="1.7651588444015105" executions_per_transaction="0.12589928057553956" pool_wait_time_per_transaction="0.010330351386710608" failure_rate="0.0">
+                    <database_topresponsetime dbsource_pool="(no SQL statement detected, discovery run missing?)"
+                                              count="105" exec_avg="13.938352030231838" exec_min="0.3188779950141907"
+                                              exec_max="37.5575670003891" exec_sum="1463.526963174343"
+                                              response_time_per_transaction="1.7548284930148"
+                                              executions_per_transaction="0.12589928057553956" failure_rate="0.0"/>
+                </database_topresponsetime>
+                <database_topresponsetime dbsource_pool="zsegkpnk@150.100.47.94:bmapx001 (ORA_BKPNKX02)" count="186" exec_avg="0.46836766151971715" exec_min="0.22387298941612244" exec_max="6.658948004245758" exec_sum="87.11638504266739" response_time_per_transaction="0.30483170750615696" executions_per_transaction="0.22302158273381295" pool_wait_time_per_transaction="0.19657632258298585" failure_rate="0.0">
+                    <database_topresponsetime
+                            dbsource_pool="SELECT * FROM KPNK.TKPNKREC WHERE COD_TIPRECSL=? AND COD_RECURSKP=? AND COD_ESCMOVSL=?"
+                            count="40" exec_avg="0.4669681526720524" exec_min="0.2994129955768585"
+                            exec_max="1.3993580043315887" exec_sum="18.678726106882095"
+                            response_time_per_transaction="0.024586695525571883"
+                            executions_per_transaction="0.047961630695443645" failure_rate="0.0"/>
+                    <database_topresponsetime dbsource_pool="(no SQL statement detected, discovery run missing?)"
+                                              count="106" exec_avg="0.5044184147186999" exec_min="0.22387298941612244"
+                                              exec_max="6.658948004245758" exec_sum="53.46835196018219"
+                                              response_time_per_transaction="0.06411073376520646"
+                                              executions_per_transaction="0.12709832134292565" failure_rate="0.0"/>
+                    <database_topresponsetime
+                            dbsource_pool="SELECT COD_GRUPOSLG FROM KPNK.TKPNKRGP WHERE COD_TIPRECSL=? AND COD_RECURSKP=?"
+                            count="40" exec_avg="0.37423267439007757" exec_min="0.22528401017189026"
+                            exec_max="1.8711209893226624" exec_sum="14.969306975603104"
+                            response_time_per_transaction="0.019557955632392737"
+                            executions_per_transaction="0.047961630695443645" failure_rate="0.0"/>
+                </database_topresponsetime>
+                <database_topresponsetime dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (ORA_BMAPX001)" count="1185" exec_avg="13.564484959086286" exec_min="0.3085950016975403" exec_max="38.4850780069828" exec_sum="16073.914676517248" response_time_per_transaction="19.377988100766565" executions_per_transaction="1.420863309352518" pool_wait_time_per_transaction="0.06986127336391157" failure_rate="0.0">
+                    <database_topresponsetime
+                            dbsource_pool="SELECT CD_CR_VIRTUAL cd_cr_virtual, CD_UG_VIRTUAL cd_ug_virtual FROM GMPMV.TPMV013_CARTERA WHERE cd_cliente = ?"
+                            count="431" exec_avg="20.786119896062843" exec_min="16.506667017936707"
+                            exec_max="38.4850780069828" exec_sum="8958.817675203085"
+                            response_time_per_transaction="10.763278485487977"
+                            executions_per_transaction="0.5167865707434053" failure_rate="0.0"/>
+                    <database_topresponsetime dbsource_pool="(no SQL statement detected, discovery run missing?)"
+                                              count="521" exec_avg="13.422544110073009" exec_min="0.332165002822876"
+                                              exec_max="28.238088995218277" exec_sum="6993.145481348038"
+                                              response_time_per_transaction="8.385066524398127"
+                                              executions_per_transaction="0.6247002398081535" failure_rate="0.0"/>
+                    <database_topresponsetime
+                            dbsource_pool="SELECT NB_UG nb_ug,TP_GESTION tp_gestion,TP_UG tp_ug, CD_PERFIL cd_perfil, TP_BANCA tp_banca, NB_TELEFONO_1 nb_telefono_1, NB_EXTENSION_1 nb_extension_1, NB_TELEFONO_2 nb_telefono_2, NB_EXTENSION_2 nb_extension_2, NB_EMAIL nb_email, CD_USUARIO cd_usuario, CD_ORIGEN_INFO cd_origen_info FROM GMPMV.TPMV019_GESTOR WHERE cd_cr = ? AND cd_ug = ?"
+                            count="233" exec_avg="0.5233970813996802" exec_min="0.3085950016975403"
+                            exec_max="3.875339984893799" exec_sum="121.95151996612549"
+                            response_time_per_transaction="0.15978181751654874"
+                            executions_per_transaction="0.2793764988009592" failure_rate="0.0"/>
+                </database_topresponsetime>
+            </database_topresponsetimes>
+            <database_topcounts structuretype="tree">
+                <database_topcount dbsource_sql="BQSRV001_MX.C_QSRV_OPE_28.insertOne({ ? }) using ACKNOWLEDGED"
+                                   exec_avg="9.143471818908656" exec_max="854.3280029967427" dbtype="MongoDB"
+                                   failure_rate="0.0"/>
+                <database_topcount dbsource_sql="(no SQL statement detected, discovery run missing?)"
+                                   exec_avg="0.48148338570188515" exec_max="8.40301501750946" dbtype="Oracle"
+                                   failure_rate="0.0"/>
+                <database_topcount
+                        dbsource_sql="SELECT PM246_DESCRIPCION FROM AMPMV.PMDT246 WHERE PM246_CVE_TIPO = ? AND PM246_CVE_SUBTIPO = ?"
+                        exec_avg="0.45221558002187456" exec_max="8.474153012037277" dbtype="Oracle" failure_rate="0.0"/>
+                <database_topcount dbsource_sql="(no SQL statement detected, discovery run missing?)"
+                                   exec_avg="13.938352030231838" exec_max="37.5575670003891" dbtype="Oracle"
+                                   failure_rate="0.0"/>
+                <database_topcount
+                        dbsource_sql="SELECT * FROM KPNK.TKPNKREC WHERE COD_TIPRECSL=? AND COD_RECURSKP=? AND COD_ESCMOVSL=?"
+                        exec_avg="0.4669681526720524" exec_max="1.3993580043315887" dbtype="Oracle" failure_rate="0.0"/>
+                <database_topcount dbsource_sql="(no SQL statement detected, discovery run missing?)"
+                                   exec_avg="0.5044184147186999" exec_max="6.658948004245758" dbtype="Oracle"
+                                   failure_rate="0.0"/>
+                <database_topcount
+                        dbsource_sql="SELECT COD_GRUPOSLG FROM KPNK.TKPNKRGP WHERE COD_TIPRECSL=? AND COD_RECURSKP=?"
+                        exec_avg="0.37423267439007757" exec_max="1.8711209893226624" dbtype="Oracle"
+                        failure_rate="0.0"/>
+                <database_topcount
+                        dbsource_sql="SELECT CD_CR_VIRTUAL cd_cr_virtual, CD_UG_VIRTUAL cd_ug_virtual FROM GMPMV.TPMV013_CARTERA WHERE cd_cliente = ?"
+                        exec_avg="20.786119896062843" exec_max="38.4850780069828" dbtype="Oracle" failure_rate="0.0"/>
+                <database_topcount dbsource_sql="(no SQL statement detected, discovery run missing?)"
+                                   exec_avg="13.422544110073009" exec_max="28.238088995218277" dbtype="Oracle"
+                                   failure_rate="0.0"/>
+                <database_topcount
+                        dbsource_sql="SELECT NB_UG nb_ug,TP_GESTION tp_gestion,TP_UG tp_ug, CD_PERFIL cd_perfil, TP_BANCA tp_banca, NB_TELEFONO_1 nb_telefono_1, NB_EXTENSION_1 nb_extension_1, NB_TELEFONO_2 nb_telefono_2, NB_EXTENSION_2 nb_extension_2, NB_EMAIL nb_email, CD_USUARIO cd_usuario, CD_ORIGEN_INFO cd_origen_info FROM GMPMV.TPMV019_GESTOR WHERE cd_cr = ? AND cd_ug = ?"
+                        exec_avg="0.5233970813996802" exec_max="3.875339984893799" dbtype="Oracle" failure_rate="0.0"/>
+            </database_topcounts>
+            <database_poolusages structuretype="tree">
+                <database_poolusage dbsource_pool="MGjbmx@127.0.0.1:BQSRV001_MX (default)" usedpoolsize_max="-"
+                                    usedpoolsize_min="-" last_pool_usage="-" poolsize="0"
+                                    agent="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmtnzx02 (ORA_BMTNZX02)"
+                                    usedpoolsize_max="0.002" usedpoolsize_min="0.002" last_pool_usage="0.002"
+                                    poolsize="500" agent="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01"
+                                    failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmtnzx02 (ORA_BMTNZX02)"
+                                    usedpoolsize_max="0.004" usedpoolsize_min="0.004" last_pool_usage="0.004"
+                                    poolsize="500" agent="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02"
+                                    failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmtnzx02 (ORA_BMTNZX02)"
+                                    usedpoolsize_max="0.004" usedpoolsize_min="0.002" last_pool_usage="0.004"
+                                    poolsize="500" agent="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03"
+                                    failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmtnzx02 (ORA_BMTNZX02)"
+                                    usedpoolsize_max="0.004" usedpoolsize_min="0.004" last_pool_usage="0.004"
+                                    poolsize="500" agent="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04"
+                                    failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (OracleXADataSource)"
+                                    usedpoolsize_max="-" usedpoolsize_min="-" poolwait_max="2.056762009859085"
+                                    poolwait_avg="1.7231026113033294" last_pool_usage="-"
+                                    agent="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03"
+                                    poolwait_sum="8.615513056516647" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zsegkpnk@150.100.47.94:bmapx001 (ORA_BKPNKX02)"
+                                    usedpoolsize_max="0.006" usedpoolsize_min="0.006" poolwait_max="8.352761000394821"
+                                    poolwait_avg="0.5299329242923043" last_pool_usage="0.006" poolsize="500"
+                                    agent="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01"
+                                    poolwait_sum="34.975573003292084" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zsegkpnk@150.100.47.94:bmapx001 (ORA_BKPNKX02)"
+                                    usedpoolsize_max="0.006" usedpoolsize_min="0.006" poolwait_max="14.661377996206284"
+                                    poolwait_avg="0.7191618879636129" last_pool_usage="0.006" poolsize="500"
+                                    agent="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02"
+                                    poolwait_sum="38.834741950035095" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zsegkpnk@150.100.47.94:bmapx001 (ORA_BKPNKX02)"
+                                    usedpoolsize_max="0.004" usedpoolsize_min="0.004" poolwait_max="7.641011983156204"
+                                    poolwait_avg="0.6123352625540325" last_pool_usage="0.004" poolsize="500"
+                                    agent="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03"
+                                    poolwait_sum="51.43616205453873" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zsegkpnk@150.100.47.94:bmapx001 (ORA_BKPNKX02)"
+                                    usedpoolsize_max="0.006" usedpoolsize_min="0.006" poolwait_max="3.0342429876327515"
+                                    poolwait_avg="0.5159756803512573" last_pool_usage="0.006" poolsize="500"
+                                    agent="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04"
+                                    poolwait_sum="38.6981760263443" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (ORA_BMAPX001)"
+                                    usedpoolsize_max="0.016" usedpoolsize_min="0.016" poolwait_max="0.0484519898891449"
+                                    poolwait_avg="0.02879820466041565" last_pool_usage="0.016" poolsize="500"
+                                    agent="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01"
+                                    poolwait_sum="0.2879820466041565" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (ORA_BMAPX001)"
+                                    usedpoolsize_max="0.01" usedpoolsize_min="0.006" poolwait_max="1.669748991727829"
+                                    poolwait_avg="1.3145781338214875" last_pool_usage="0.01" poolsize="500"
+                                    agent="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02"
+                                    poolwait_sum="19.71867200732231" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (ORA_BMAPX001)"
+                                    usedpoolsize_max="0.008" usedpoolsize_min="0.006" poolwait_max="1.6871920228004456"
+                                    poolwait_avg="1.3778085947036742" last_pool_usage="0.008" poolsize="500"
+                                    agent="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03"
+                                    poolwait_sum="13.778085947036743" failure_rate="0.0"/>
+                <database_poolusage dbsource_pool="zapxmpmv@150.100.47.94:bmapx001 (ORA_BMAPX001)"
+                                    usedpoolsize_max="0.006" usedpoolsize_min="0.006" poolwait_max="1.9597369730472565"
+                                    poolwait_avg="1.4399742343846489" last_pool_usage="0.006" poolsize="500"
+                                    agent="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04"
+                                    poolwait_sum="24.479561984539032" failure_rate="0.0"/>
+            </database_poolusages>
+        </databasedashlet>
+        <admdashlet name="Transaction Flow" description="" displaysource="Base">
+            <adm structuretype="table">
+                <agent name="APXO_LVEMXCAXJBON03_QWPO_E01_10" host="lvemxcaxjbon03" group="APX ONLINE" technology="Java"
+                       response_avg="40.785194693259825" response_min="28.201379776000977"
+                       response_max="207.05613708496094" response_sum="8401.750106811523" exec_avg="50.087690045822015"
+                       exec_min="31.38938546180725" exec_max="433.54803344607353" exec_sum="10318.064149439335"
+                       exec_cpu_avg="11.723356714643971" exec_cpu_min="8.306720552965999"
+                       exec_cpu_max="17.744026199914515" exec_cpu_sum="2415.0114832166582"/>
+                <agent name="APXO_LVMMXCAXJBON01_QWPO_E01_10" host="lvmmxcaxjbon01" group="APX ONLINE" technology="Java"
+                       response_avg="35.2660027363854" response_min="27.694091796875" response_max="57.726280212402344"
+                       response_sum="7441.126577377319" exec_avg="43.27252767125577" exec_min="29.83173957467079"
+                       exec_max="63.02447631955147" exec_sum="9130.503338634968" exec_cpu_avg="10.40533533250092"
+                       exec_cpu_min="6.520455956459045" exec_cpu_max="16.40799075551331"
+                       exec_cpu_sum="2195.525755157694"/>
+                <agent name="APXO_LVMMXCAXJBON02_QWPO_E01_10" host="lvmmxcaxjbon02" group="APX ONLINE" technology="Java"
+                       response_avg="41.20345447713679" response_min="29.46257781982422"
+                       response_max="139.56976318359375" response_sum="9064.759984970093" exec_avg="49.72357798178088"
+                       exec_min="31.210827559232712" exec_max="143.10557693243027" exec_sum="10939.187155991793"
+                       exec_cpu_avg="13.163304431169209" exec_cpu_min="9.056187042966485"
+                       exec_cpu_max="19.385248875245452" exec_cpu_sum="2895.926974857226"/>
+                <agent name="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10" host="lvmmxcasjbnp06" group="ARQ_SRV"
+                       technology="Java" response_avg="410.2057333930219" response_min="192.8957977294922"
+                       response_max="1154.0384521484375" response_sum="342111.5816497803" exec_avg="164.05727910413015"
+                       exec_min="52.449624598026276" exec_max="669.6099700704217" exec_sum="136823.77077284455"
+                       exec_cpu_avg="42.148103787935604" exec_cpu_min="38.201688420027494"
+                       exec_cpu_max="52.43799689412117" exec_cpu_sum="35151.51855913829"/>
+                <agent name="APXO_LVEMXCAXJBON04_QWPO_E01_10" host="lvemxcaxjbon04" group="APX ONLINE" technology="Java"
+                       response_avg="39.38800635555674" response_min="28.735610961914062"
+                       response_max="67.8990707397461" response_sum="7759.437252044678" exec_avg="47.30550436516704"
+                       exec_min="31.31908169388771" exec_max="71.01968282461166" exec_sum="9319.184359937906"
+                       exec_cpu_avg="11.706139229654056" exec_cpu_min="8.555844178423285"
+                       exec_cpu_max="18.743924740701914" exec_cpu_sum="2306.109428241849"/>
+                <agent name="bmapx001" host="150.100.47.94" group="Oracle" technology="Unknown"
+                       response_avg="5.440271957521383" response_min="0.01019197702407837"
+                       response_max="38.4850780069828" response_sum="17887.61419633031" db_avg="5.981297333419404"
+                       db_min="0.01019197702407837" db_max="38.4850780069828" db_sum="17656.78972825408"
+                       acq_avg="0.6869775835602057" acq_min="0.014614999294281006" acq_max="14.661377996206284"
+                       acq_sum="230.8244680762291"/>
+                <agent name="Database" host="-" group="Database" technology="Unknown" response_avg="1.6321904257462736"
+                       response_min="0.019181013107299805" response_max="83.16704598069191"
+                       response_sum="1860.6970853507519" acq_avg="1.6321904257462736" acq_min="0.019181013107299805"
+                       acq_max="83.16704598069191" acq_sum="1860.6970853507519"/>
+                <agent name="bmtnzx02" host="150.100.47.94" group="Oracle" technology="Unknown"
+                       response_avg="0.24189233412279895" response_min="0.00911402702331543"
+                       response_max="8.474153012037277" response_sum="441.2116174399853" db_avg="0.24189233412279895"
+                       db_min="0.00911402702331543" db_max="8.474153012037277" db_sum="441.2116174399853"/>
+                <agent name="BQSRV001_MX" host="127.0.0.1" group="MongoDB" technology="Unknown"
+                       response_avg="9.143471818908656" response_min="1.0691020041704178"
+                       response_max="854.3280029967427" response_sum="7625.655496969819" db_avg="9.143471818908656"
+                       db_min="1.0691020041704178" db_max="854.3280029967427" db_sum="7625.655496969819"/>
+                <agent name="External Service" host="localhost" group="Domainless" technology="Unknown"
+                       response_avg="201.21163712248958" response_min="91.46153900027275"
+                       response_max="538.214226000011" response_sum="167810.5053601563" exec_avg="201.21163712248958"
+                       exec_min="91.46153900027275" exec_max="538.214226000011" exec_sum="167810.5053601563"
+                       exec_cpu_avg="0.24124518946277723" exec_cpu_min="0.16201700270175934"
+                       exec_cpu_max="1.1446739435195923" exec_cpu_sum="201.19848801195621"/>
+                <agent name="External Service" host="bsegmxqar2.linux.bbvabancomer.com.mx" group="bbvabancomer.com.mx"
+                       technology="Unknown" response_avg="6.212053274463335" response_min="1.1307830065488815"
+                       response_max="81.50630500167608" response_sum="5180.8524309024215" exec_avg="6.212053274463335"
+                       exec_min="1.1307830065488815" exec_max="81.50630500167608" exec_sum="5180.8524309024215"
+                       exec_cpu_avg="0.3409795645865605" exec_cpu_min="0.19687899947166443"
+                       exec_cpu_max="7.736555099487305" exec_cpu_sum="284.37695686519146"/>
+            </adm>
+            <adm_links structuretype="table">
+                <agent from="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03" group="APX ONLINE"
+                       to="bmapx001@150.100.47.94" remoting_count="373"/>
+                <agent from="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03" group="APX ONLINE" to="Database@-"
+                       remoting_count="0"/>
+                <agent from="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03" group="APX ONLINE"
+                       to="bmtnzx02@150.100.47.94" remoting_count="222"/>
+                <agent from="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04" group="APX ONLINE"
+                       to="bmapx001@150.100.47.94" remoting_count="359"/>
+                <agent from="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04" group="APX ONLINE" to="Database@-"
+                       remoting_count="0"/>
+                <agent from="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04" group="APX ONLINE"
+                       to="bmtnzx02@150.100.47.94" remoting_count="224"/>
+                <agent from="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01" group="APX ONLINE"
+                       to="bmapx001@150.100.47.94" remoting_count="363"/>
+                <agent from="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01" group="APX ONLINE" to="Database@-"
+                       remoting_count="0"/>
+                <agent from="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01" group="APX ONLINE"
+                       to="bmtnzx02@150.100.47.94" remoting_count="216"/>
+                <agent from="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02" group="APX ONLINE"
+                       to="bmapx001@150.100.47.94" remoting_count="381"/>
+                <agent from="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02" group="APX ONLINE" to="Database@-"
+                       remoting_count="0"/>
+                <agent from="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02" group="APX ONLINE"
+                       to="bmtnzx02@150.100.47.94" remoting_count="250"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="External Service@localhost" remoting_count="834"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="APXO_LVEMXCAXJBON03_QWPO_E01_10@lvemxcaxjbon03" remoting_count="206"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="APXO_LVEMXCAXJBON04_QWPO_E01_10@lvemxcaxjbon04" remoting_count="197"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="BQSRV001_MX@127.0.0.1" remoting_count="834"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="APXO_LVMMXCAXJBON01_QWPO_E01_10@lvmmxcaxjbon01" remoting_count="211"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="APXO_LVMMXCAXJBON02_QWPO_E01_10@lvmmxcaxjbon02" remoting_count="220"/>
+                <agent from="ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" group="ARQ_SRV"
+                       to="External Service@bsegmxqar2.linux.bbvabancomer.com.mx" remoting_count="834"/>
+            </adm_links>
+        </admdashlet>
+        <textdashlet name="Load Test Overview" description="${context|}">
+        </textdashlet>
+        <textdashlet name=""
+                     description="This dashboard gives a quick overview of a load test. Select a Timer/Step in the table below and see the details in the views underneath. Use the Transaction Flow to understand what tiers are involved and find out which components are critical for your performance with Response Time Hotspots. For additional information on how to analyze load tests with Dynatrace see [Dynatrace and Testing|https://www.dynatrace.com/support/doc/appmon70/shortlink/id_load_test_overview_dashboard]"/>
+        <apibreakdowndashlet name="API Breakdown" description="" displaysource="Base">
+            <apis structuretype="table">
+                <api name="Web Request" exec_avg="214.43123424539178" cpu_avg="0.9216992597785785"/>
+                <api name="Bbva" exec_avg="80.36428608086041" cpu_avg="23.571781106436138"/>
+                <api name="Hazelcast" exec_avg="64.28993674461468" cpu_avg="0.3919408551118017"/>
+                <api name="Rabbitmq" exec_avg="42.8946630184467" cpu_avg="0.26503807650162625"/>
+                <api name="Grupobbva" exec_avg="27.753254463346742" cpu_avg="16.300760184546455"/>
+                <api name="JDBC" exec_avg="21.916485045453626" cpu_avg="0.3935093938303794"/>
+                <api name="Fasterxml" exec_avg="14.408613522847494" cpu_avg="5.610170841217041"/>
+                <api name="Flexjson" exec_avg="10.344775295257568" cpu_avg="1.5561532020568847"/>
+                <api name="Classloading" exec_avg="9.672708415985108" cpu_avg="0.9955448567867279"/>
+                <api name="MongoDB" exec_avg="9.143471842189486" cpu_avg="0.3711403126267792"/>
+                <api name="Threading" exec_avg="8.741494635874918" cpu_avg="0.3740607316313173"/>
+                <api name="Google" exec_avg="8.449166933695475" cpu_avg="1.7183900856309466"/>
+                <api name="Bson" exec_avg="6.562068939208984" cpu_avg="1.1664990186691284"/>
+                <api name="Java Web Services" exec_avg="6.007364624838749" cpu_avg="5.681805537794705"/>
+                <api name="Log" exec_avg="5.699707606186469" cpu_avg="1.6963374084956069"/>
+                <api name="Servlet" exec_avg="4.446845171405829" cpu_avg="3.982812656103064"/>
+                <api name="XA" exec_avg="3.3068524700560444" cpu_avg="0.35268640085804664"/>
+                <api name="Codehaus" exec_avg="0.9280578401520384" cpu_avg="0.6536614119077472"/>
+                <api name="Slf4j" exec_avg="0.6747654751211513" cpu_avg="0.35318517211784406"/>
+                <api name="Undertow" exec_avg="0.4656569679453076" cpu_avg="0.15137933708986434"/>
+                <api name="Connection Pooling" exec_avg="0.4442359950545309" cpu_avg="0.31053113240561037"/>
+                <api name="Arjuna" exec_avg="0.1592868227816693" cpu_avg="0.08471763676619411"/>
+                <api name="JTA" exec_avg="0.10338133516357385" cpu_avg="0.07204156406045104"/>
+                <api name="JNDI" exec_avg="0.03555735577639344" cpu_avg="0.0032337087583984973"/>
+            </apis>
+        </apibreakdowndashlet>
+        <chartdashlet name="cpu_total" description="" showabsolutevalues="false">
+            <measures structuretype="tree">
+                <measure measure="CPU Total Time - CPU Total Time (split by Agent Host)" unit="%">
+                    <measure measure="CPU Total Time - lvmmxcasjbnp06" unit="%">
+                        <measurement timestamp="1548713100000" avg="9.44763437906901" min="7.872825622558594"
+                                     max="10.320465087890625" sum="56.68580627441406" count="6"/>
+                        <measurement timestamp="1548713160000" avg="10.049814860026041" min="8.028274536132812"
+                                     max="14.238914489746094" sum="60.29888916015625" count="6"/>
+                        <measurement timestamp="1548713220000" avg="8.638434092203775" min="6.9591522216796875"
+                                     max="9.528610229492188" sum="51.830604553222656" count="6"/>
+                        <measurement timestamp="1548713280000" avg="9.0779660542806" min="7.804634094238281"
+                                     max="11.242752075195312" sum="54.467796325683594" count="6"/>
+                        <measurement timestamp="1548713340000" avg="33.951822916666664" min="8.889450073242188"
+                                     max="48.079837799072266" sum="203.7109375" count="6"/>
+                        <measurement timestamp="1548713400000" avg="44.5673828125" min="41.43939208984375"
+                                     max="48.18090057373047" sum="267.404296875" count="6"/>
+                        <measurement timestamp="1548713460000" avg="44.01368713378906" min="39.98990249633789"
+                                     max="48.13319778442383" sum="264.0821228027344" count="6"/>
+                        <measurement timestamp="1548713520000" avg="45.51461283365885" min="38.0196533203125"
+                                     max="50.896236419677734" sum="273.0876770019531" count="6"/>
+                        <measurement timestamp="1548713580000" avg="70.31093343098958" min="48.88888931274414"
+                                     max="89.33500671386719" sum="421.8656005859375" count="6"/>
+                        <measurement timestamp="1548713640000" avg="83.55042012532552" min="45.94253921508789"
+                                     max="98.49962615966797" sum="501.3025207519531" count="6"/>
+                        <measurement timestamp="1548713700000" avg="44.66703796386719" min="37.85353469848633"
+                                     max="49.5965690612793" sum="268.0022277832031" count="6"/>
+                        <measurement timestamp="1548713760000" avg="46.165486653645836" min="43.44096755981445"
+                                     max="50.95718002319336" sum="276.992919921875" count="6"/>
+                        <measurement timestamp="1548713820000" avg="45.782867431640625" min="41.38453674316406"
+                                     max="49.26841735839844" sum="274.69720458984375" count="6"/>
+                        <measurement timestamp="1548713880000" avg="45.443603515625" min="38.181819915771484"
+                                     max="50.491554260253906" sum="272.66162109375" count="6"/>
+                        <measurement timestamp="1548713940000" avg="43.74712626139323" min="38.190067291259766"
+                                     max="47.21030044555664" sum="262.4827575683594" count="6"/>
+                        <measurement timestamp="1548714000000" avg="46.619781494140625" min="42.99773025512695"
+                                     max="49.245094299316406" sum="279.71868896484375" count="6"/>
+                        <measurement timestamp="1548714060000" avg="46.46679178873698" min="43.28282928466797"
+                                     max="48.99142837524414" sum="278.8007507324219" count="6"/>
+                        <measurement timestamp="1548714120000" avg="46.155680338541664" min="43.52109146118164"
+                                     max="52.31855010986328" sum="276.93408203125" count="6"/>
+                        <measurement timestamp="1548714180000" avg="47.8902842203776" min="40.55555725097656"
+                                     max="58.13777542114258" sum="287.3417053222656" count="6"/>
+                        <measurement timestamp="1548714240000" avg="46.70136515299479" min="39.02500534057617"
+                                     max="50.15143966674805" sum="280.20819091796875" count="6"/>
+                        <measurement timestamp="1548714300000" avg="46.600911458333336" min="42.84632873535156"
+                                     max="51.86868667602539" sum="279.60546875" count="6"/>
+                        <measurement timestamp="1548714360000" avg="47.62964884440104" min="44.41354751586914"
+                                     max="49.58280563354492" sum="285.77789306640625" count="6"/>
+                        <measurement timestamp="1548714420000" avg="47.55409240722656" min="45.83753967285156"
+                                     max="50.896236419677734" sum="285.3245544433594" count="6"/>
+                        <measurement timestamp="1548714480000" avg="47.846221923828125" min="44.89125061035156"
+                                     max="51.70756530761719" sum="287.07733154296875" count="6"/>
+                        <measurement timestamp="1548714540000" avg="45.8648935953776" min="37.572547912597656"
+                                     max="49.83565139770508" sum="275.1893615722656" count="6"/>
+                        <measurement timestamp="1548714600000" avg="46.69329833984375" min="42.95471954345703"
+                                     max="50.03788757324219" sum="280.1597900390625" count="6"/>
+                        <measurement timestamp="1548714660000" avg="45.026774088541664" min="39.0625"
+                                     max="49.533180236816406" sum="270.16064453125" count="6"/>
+                        <measurement timestamp="1548714720000" avg="43.08976745605469" min="35.4366455078125"
+                                     max="47.625064849853516" sum="258.5386047363281" count="6"/>
+                        <measurement timestamp="1548714780000" avg="44.30445353190104" min="35.867645263671875"
+                                     max="47.623863220214844" sum="265.82672119140625" count="6"/>
+                        <measurement timestamp="1548714840000" avg="45.6904296875" min="42.322288513183594"
+                                     max="50.416770935058594" sum="274.142578125" count="6"/>
+                        <measurement timestamp="1548714900000" avg="43.378580729166664" min="36.03740310668945"
+                                     max="49.09228515625" sum="260.271484375" count="6"/>
+                        <measurement timestamp="1548714960000" avg="46.048177083333336" min="42.957923889160156"
+                                     max="50.99924087524414" sum="276.2890625" count="6"/>
+                        <measurement timestamp="1548715020000" avg="45.51023864746094" min="43.32321548461914"
+                                     max="48.874271392822266" sum="273.0614318847656" count="6"/>
+                        <measurement timestamp="1548715080000" avg="45.11430867513021" min="42.94385528564453"
+                                     max="47.56251525878906" sum="270.68585205078125" count="6"/>
+                        <measurement timestamp="1548715140000" avg="44.6548105875651" min="39.14689636230469"
+                                     max="49.27939224243164" sum="267.9288635253906" count="6"/>
+                        <measurement timestamp="1548715200000" avg="46.05846659342448" min="44.565216064453125"
+                                     max="49.230770111083984" sum="276.3507995605469" count="6"/>
+                        <measurement timestamp="1548715260000" avg="46.44525146484375" min="40.636043548583984"
+                                     max="56.49432373046875" sum="278.6715087890625" count="6"/>
+                        <measurement timestamp="1548715320000" avg="44.64881388346354" min="41.92491912841797"
+                                     max="47.402923583984375" sum="267.89288330078125" count="6"/>
+                        <measurement timestamp="1548715380000" avg="48.86126708984375" min="42.97624969482422"
+                                     max="54.00758361816406" sum="293.1676025390625" count="6"/>
+                        <measurement timestamp="1548715440000" avg="52.23235066731771" min="48.032291412353516"
+                                     max="57.1861572265625" sum="313.39410400390625" count="6"/>
+                        <measurement timestamp="1548715500000" avg="52.05540974934896" min="48.345542907714844"
+                                     max="56.3934440612793" sum="312.33245849609375" count="6"/>
+                        <measurement timestamp="1548715560000" avg="57.16496276855469" min="47.51199722290039"
+                                     max="71.57232666015625" sum="342.9897766113281" count="6"/>
+                        <measurement timestamp="1548715620000" avg="48.61259969075521" min="41.2862548828125"
+                                     max="54.824893951416016" sum="291.67559814453125" count="6"/>
+                        <measurement timestamp="1548715680000" avg="48.988739013671875" min="44.39665985107422"
+                                     max="52.217742919921875" sum="293.93243408203125" count="6"/>
+                        <measurement timestamp="1548715740000" avg="48.01432800292969" min="45.66313552856445"
+                                     max="49.83606719970703" sum="288.0859680175781" count="6"/>
+                        <measurement timestamp="1548715800000" avg="47.65564982096354" min="43.85432434082031"
+                                     max="49.84840774536133" sum="285.93389892578125" count="6"/>
+                        <measurement timestamp="1548715860000" avg="48.92691548665365" min="46.84024429321289"
+                                     max="51.097652435302734" sum="293.5614929199219" count="6"/>
+                        <measurement timestamp="1548715920000" avg="48.37297566731771" min="46.250946044921875"
+                                     max="52.24974822998047" sum="290.23785400390625" count="6"/>
+                    </measure>
+                </measure>
+            </measures>
+        </chartdashlet>
+        <chartdashlet name="memory_used" description="" showabsolutevalues="false">
+            <measures structuretype="tree">
+                <measure measure="Used Memory - Used Memory (split by Agent)" avg="3216.889170328776" unit="MB" drawingorder="1">
+                    <measure measure="Used Memory - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" avg="3216.889170328776" unit="MB">
+                        <measurement timestamp="1548713100000" avg="3858.9000651041665" min="3730.831787109375"
+                                     max="4017.40869140625" sum="23153.400390625" count="6"/>
+                        <measurement timestamp="1548713160000" avg="4203.583984375" min="4074.931396484375"
+                                     max="4336.44482421875" sum="25221.50390625" count="6"/>
+                        <measurement timestamp="1548713220000" avg="3182.9524739583335" min="1865.400146484375"
+                                     max="4504.21435546875" sum="19097.71484375" count="6"/>
+                        <measurement timestamp="1548713280000" avg="2142.9816080729165" min="2019.3848876953125"
+                                     max="2266.073974609375" sum="12857.8896484375" count="6"/>
+                        <measurement timestamp="1548713340000" avg="3023.8714192708335" min="1941.724609375"
+                                     max="4215.05908203125" sum="18143.228515625" count="6"/>
+                        <measurement timestamp="1548713400000" avg="3123.4794921875" min="2154.639404296875"
+                                     max="4388.0830078125" sum="18740.876953125" count="6"/>
+                        <measurement timestamp="1548713460000" avg="3030.21484375" min="1932.3575439453125"
+                                     max="4214.3837890625" sum="18181.2890625" count="6"/>
+                        <measurement timestamp="1548713520000" avg="3330.8317057291665" min="2369.8173828125"
+                                     max="4469.77880859375" sum="19984.990234375" count="6"/>
+                        <measurement timestamp="1548713580000" avg="2815.3089192708335" min="1884.41162109375"
+                                     max="3791.331787109375" sum="16891.853515625" count="6"/>
+                        <measurement timestamp="1548713640000" avg="2838.7972005208335" min="1907.5523681640625"
+                                     max="3954.066650390625" sum="17032.783203125" count="6"/>
+                        <measurement timestamp="1548713700000" avg="3410.0084635416665" min="2366.480224609375"
+                                     max="4552.59033203125" sum="20460.05078125" count="6"/>
+                        <measurement timestamp="1548713760000" avg="3452.9794921875" min="2346.740966796875"
+                                     max="4552.7861328125" sum="20717.876953125" count="6"/>
+                        <measurement timestamp="1548713820000" avg="3484.1002604166665" min="2356.2412109375"
+                                     max="4533.82958984375" sum="20904.6015625" count="6"/>
+                        <measurement timestamp="1548713880000" avg="3443.3756510416665" min="2169.111328125"
+                                     max="4363.35595703125" sum="20660.25390625" count="6"/>
+                        <measurement timestamp="1548713940000" avg="2935.3935546875" min="2017.5164794921875"
+                                     max="4205.7001953125" sum="17612.361328125" count="6"/>
+                        <measurement timestamp="1548714000000" avg="3045.3873697916665" min="2038.0782470703125"
+                                     max="4218.30078125" sum="18272.32421875" count="6"/>
+                        <measurement timestamp="1548714060000" avg="3176.6858723958335" min="2087.8955078125"
+                                     max="4269.5107421875" sum="19060.115234375" count="6"/>
+                        <measurement timestamp="1548714120000" avg="3249.1266276041665" min="2070.896728515625"
+                                     max="4268.341796875" sum="19494.759765625" count="6"/>
+                        <measurement timestamp="1548714180000" avg="3208.5192057291665" min="2027.736328125"
+                                     max="4213.5078125" sum="19251.115234375" count="6"/>
+                        <measurement timestamp="1548714240000" avg="3212.1399739583335" min="1883.8402099609375"
+                                     max="4493.76171875" sum="19272.83984375" count="6"/>
+                        <measurement timestamp="1548714300000" avg="3172.1741536458335" min="2220.68603515625"
+                                     max="4401.2099609375" sum="19033.044921875" count="6"/>
+                        <measurement timestamp="1548714360000" avg="3191.5690104166665" min="2157.481201171875"
+                                     max="4370.73974609375" sum="19149.4140625" count="6"/>
+                        <measurement timestamp="1548714420000" avg="3246.7360026041665" min="2154.795654296875"
+                                     max="4351.958984375" sum="19480.416015625" count="6"/>
+                        <measurement timestamp="1548714480000" avg="3289.49609375" min="2106.93115234375"
+                                     max="4313.58203125" sum="19736.9765625" count="6"/>
+                        <measurement timestamp="1548714540000" avg="3319.4580078125" min="2091.861328125"
+                                     max="4258.7470703125" sum="19916.748046875" count="6"/>
+                        <measurement timestamp="1548714600000" avg="3253.8362630208335" min="1919.97021484375"
+                                     max="4523.15185546875" sum="19523.017578125" count="6"/>
+                        <measurement timestamp="1548714660000" avg="3238.37109375" min="2317.0166015625"
+                                     max="4511.40234375" sum="19430.2265625" count="6"/>
+                        <measurement timestamp="1548714720000" avg="3144.6246744791665" min="2078.3427734375"
+                                     max="4270.880859375" sum="18867.748046875" count="6"/>
+                        <measurement timestamp="1548714780000" avg="3034.6751302083335" min="1940.5631103515625"
+                                     max="4132.46044921875" sum="18208.05078125" count="6"/>
+                        <measurement timestamp="1548714840000" avg="3087.0745442708335" min="1921.4931640625"
+                                     max="4125.2919921875" sum="18522.447265625" count="6"/>
+                        <measurement timestamp="1548714900000" avg="3429.6009114583335" min="2234.159912109375"
+                                     max="4432.8779296875" sum="20577.60546875" count="6"/>
+                        <measurement timestamp="1548714960000" avg="3439.1051432291665" min="2167.181640625"
+                                     max="4369.01953125" sum="20634.630859375" count="6"/>
+                        <measurement timestamp="1548715020000" avg="3061.99609375" min="2141.486328125"
+                                     max="4341.63134765625" sum="18371.9765625" count="6"/>
+                        <measurement timestamp="1548715080000" avg="3086.4319661458335" min="2045.070556640625"
+                                     max="4302.4580078125" sum="18518.591796875" count="6"/>
+                        <measurement timestamp="1548715140000" avg="2995.5205078125" min="1900.315185546875"
+                                     max="4091.515625" sum="17973.123046875" count="6"/>
+                        <measurement timestamp="1548715200000" avg="3506.1341145833335" min="2401.27197265625"
+                                     max="4606.912109375" sum="21036.8046875" count="6"/>
+                        <measurement timestamp="1548715260000" avg="3622.0426432291665" min="2189.717529296875"
+                                     max="4482.26513671875" sum="21732.255859375" count="6"/>
+                        <measurement timestamp="1548715320000" avg="3082.0631510416665" min="2146.16357421875"
+                                     max="4333.82861328125" sum="18492.37890625" count="6"/>
+                        <measurement timestamp="1548715380000" avg="3322.2112630208335" min="2514.968505859375"
+                                     max="4504.10888671875" sum="19933.267578125" count="6"/>
+                        <measurement timestamp="1548715440000" avg="2984.7249348958335" min="1923.510498046875"
+                                     max="4060.278076171875" sum="17908.349609375" count="6"/>
+                        <measurement timestamp="1548715500000" avg="3191.0237630208335" min="2176.354248046875"
+                                     max="4191.857421875" sum="19146.142578125" count="6"/>
+                        <measurement timestamp="1548715560000" avg="3404.759765625" min="2305.959716796875"
+                                     max="4282.568359375" sum="20428.55859375" count="6"/>
+                        <measurement timestamp="1548715620000" avg="3060.6103515625" min="1969.3037109375"
+                                     max="4553.70849609375" sum="18363.662109375" count="6"/>
+                        <measurement timestamp="1548715680000" avg="2938.2503255208335" min="1941.8720703125"
+                                     max="4245.91845703125" sum="17629.501953125" count="6"/>
+                        <measurement timestamp="1548715740000" avg="3266.984375" min="2339.072021484375"
+                                     max="4451.42529296875" sum="19601.90625" count="6"/>
+                        <measurement timestamp="1548715800000" avg="3155.4348958333335" min="1965.0015869140625"
+                                     max="4100.55126953125" sum="18932.609375" count="6"/>
+                        <measurement timestamp="1548715860000" avg="3444.1787109375" min="2116.76123046875"
+                                     max="4436.30419921875" sum="20665.072265625" count="6"/>
+                        <measurement timestamp="1548715920000" avg="3272.9541015625" min="2318.10791015625"
+                                     max="4560.22021484375" sum="19637.724609375" count="6"/>
+                    </measure>
+                </measure>
+                <measure measure="Total GC Collection Time - Total GC Collection Time - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06 (split by Agent)" avg="20.256944444444446" unit="ms" drawingorder="3">
+                    <measure measure="Total GC Collection Time - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" avg="20.256944444444446" unit="ms">
+                        <measurement timestamp="1548713100000" avg="0.0" min="0.0" max="0.0" sum="0.0" count="6"/>
+                        <measurement timestamp="1548713160000" avg="0.0" min="0.0" max="0.0" sum="0.0" count="6"/>
+                        <measurement timestamp="1548713220000" avg="12.0" min="0.0" max="72.0" sum="72.0" count="6"/>
+                        <measurement timestamp="1548713280000" avg="0.0" min="0.0" max="0.0" sum="0.0" count="6"/>
+                        <measurement timestamp="1548713340000" avg="21.0" min="0.0" max="126.0" sum="126.0" count="6"/>
+                        <measurement timestamp="1548713400000" avg="27.5" min="0.0" max="99.0" sum="165.0" count="6"/>
+                        <measurement timestamp="1548713460000" avg="15.666666666666666" min="0.0" max="94.0" sum="94.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713520000" avg="14.166666666666666" min="0.0" max="85.0" sum="85.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713580000" avg="42.333333333333336" min="0.0" max="110.0"
+                                     sum="254.0" count="6"/>
+                        <measurement timestamp="1548713640000" avg="43.833333333333336" min="0.0" max="92.0" sum="263.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713700000" avg="20.666666666666668" min="0.0" max="124.0"
+                                     sum="124.0" count="6"/>
+                        <measurement timestamp="1548713760000" avg="15.666666666666666" min="0.0" max="94.0" sum="94.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713820000" avg="18.666666666666668" min="0.0" max="112.0"
+                                     sum="112.0" count="6"/>
+                        <measurement timestamp="1548713880000" avg="13.5" min="0.0" max="81.0" sum="81.0" count="6"/>
+                        <measurement timestamp="1548713940000" avg="31.333333333333332" min="0.0" max="95.0" sum="188.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714000000" avg="18.0" min="0.0" max="108.0" sum="108.0" count="6"/>
+                        <measurement timestamp="1548714060000" avg="20.333333333333332" min="0.0" max="122.0"
+                                     sum="122.0" count="6"/>
+                        <measurement timestamp="1548714120000" avg="23.0" min="0.0" max="138.0" sum="138.0" count="6"/>
+                        <measurement timestamp="1548714180000" avg="12.666666666666666" min="0.0" max="76.0" sum="76.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714240000" avg="15.166666666666666" min="0.0" max="91.0" sum="91.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714300000" avg="31.5" min="0.0" max="105.0" sum="189.0" count="6"/>
+                        <measurement timestamp="1548714360000" avg="16.666666666666668" min="0.0" max="100.0"
+                                     sum="100.0" count="6"/>
+                        <measurement timestamp="1548714420000" avg="19.5" min="0.0" max="117.0" sum="117.0" count="6"/>
+                        <measurement timestamp="1548714480000" avg="15.666666666666666" min="0.0" max="94.0" sum="94.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714540000" avg="14.5" min="0.0" max="87.0" sum="87.0" count="6"/>
+                        <measurement timestamp="1548714600000" avg="15.666666666666666" min="0.0" max="94.0" sum="94.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714660000" avg="32.166666666666664" min="0.0" max="101.0"
+                                     sum="193.0" count="6"/>
+                        <measurement timestamp="1548714720000" avg="21.666666666666668" min="0.0" max="130.0"
+                                     sum="130.0" count="6"/>
+                        <measurement timestamp="1548714780000" avg="14.333333333333334" min="0.0" max="86.0" sum="86.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714840000" avg="13.833333333333334" min="0.0" max="83.0" sum="83.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714900000" avg="14.0" min="0.0" max="84.0" sum="84.0" count="6"/>
+                        <measurement timestamp="1548714960000" avg="16.333333333333332" min="0.0" max="98.0" sum="98.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715020000" avg="33.166666666666664" min="0.0" max="109.0"
+                                     sum="199.0" count="6"/>
+                        <measurement timestamp="1548715080000" avg="16.5" min="0.0" max="99.0" sum="99.0" count="6"/>
+                        <measurement timestamp="1548715140000" avg="14.0" min="0.0" max="84.0" sum="84.0" count="6"/>
+                        <measurement timestamp="1548715200000" avg="15.333333333333334" min="0.0" max="92.0" sum="92.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715260000" avg="14.166666666666666" min="0.0" max="85.0" sum="85.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715320000" avg="39.666666666666664" min="0.0" max="121.0"
+                                     sum="238.0" count="6"/>
+                        <measurement timestamp="1548715380000" avg="17.5" min="0.0" max="105.0" sum="105.0" count="6"/>
+                        <measurement timestamp="1548715440000" avg="24.833333333333332" min="0.0" max="84.0" sum="149.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715500000" avg="10.5" min="0.0" max="63.0" sum="63.0" count="6"/>
+                        <measurement timestamp="1548715560000" avg="26.833333333333332" min="0.0" max="87.0" sum="161.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715620000" avg="64.33333333333333" min="0.0" max="262.0" sum="386.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715680000" avg="27.166666666666668" min="0.0" max="108.0"
+                                     sum="163.0" count="6"/>
+                        <measurement timestamp="1548715740000" avg="15.166666666666666" min="0.0" max="91.0" sum="91.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715800000" avg="16.5" min="0.0" max="99.0" sum="99.0" count="6"/>
+                        <measurement timestamp="1548715860000" avg="14.166666666666666" min="0.0" max="85.0" sum="85.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715920000" avg="31.166666666666668" min="0.0" max="94.0" sum="187.0"
+                                     count="6"/>
+                    </measure>
+                </measure>
+                <measure measure="Max Memory - Max Memory - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06 (split by Agent)" avg="5096.0" unit="MB" drawingorder="2">
+                    <measure measure="Max Memory - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" avg="5096.0" unit="MB">
+                        <measurement timestamp="1548713100000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713160000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713220000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713280000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713340000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713400000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713460000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713520000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713580000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713640000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713700000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713760000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713820000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713880000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548713940000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714000000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714060000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714120000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714180000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714240000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714300000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714360000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714420000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714480000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714540000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714600000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714660000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714720000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714780000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714840000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714900000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548714960000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715020000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715080000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715140000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715200000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715260000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715320000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715380000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715440000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715500000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715560000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715620000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715680000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715740000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715800000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715860000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                        <measurement timestamp="1548715920000" avg="5096.0" min="5096.0" max="5096.0" sum="30576.0"
+                                     count="6"/>
+                    </measure>
+                </measure>
+            </measures>
+        </chartdashlet>
+        <chartdashlet name="throughput" description="" showabsolutevalues="false">
+            <measures structuretype="tree">
+                <measure measure="Count - Count (split by Agent)" unit="num">
+                    <measure measure="Count - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" unit="num">
+                        <measurement timestamp="1548713100000" avg="1.0" min="1.0" max="1.0" sum="10.0" count="10"/>
+                        <measurement timestamp="1548713160000" avg="1.0" min="1.0" max="1.0" sum="11.0" count="11"/>
+                        <measurement timestamp="1548713220000" avg="1.0" min="1.0" max="1.0" sum="10.0" count="10"/>
+                        <measurement timestamp="1548713280000" avg="1.0" min="1.0" max="1.0" sum="6.0" count="6"/>
+                        <measurement timestamp="1548713340000" avg="1.0" min="1.0" max="1.0" sum="375.0" count="375"/>
+                        <measurement timestamp="1548713400000" avg="1.0" min="1.0" max="1.0" sum="462.0" count="462"/>
+                        <measurement timestamp="1548713460000" avg="1.0" min="1.0" max="1.0" sum="435.0" count="435"/>
+                        <measurement timestamp="1548713520000" avg="1.0" min="1.0" max="1.0" sum="497.0" count="497"/>
+                        <measurement timestamp="1548713580000" avg="1.0" min="1.0" max="1.0" sum="930.0" count="930"/>
+                        <measurement timestamp="1548713640000" avg="1.0" min="1.0" max="1.0" sum="947.0" count="947"/>
+                        <measurement timestamp="1548713700000" avg="1.0" min="1.0" max="1.0" sum="480.0" count="480"/>
+                        <measurement timestamp="1548713760000" avg="1.0" min="1.0" max="1.0" sum="489.0" count="489"/>
+                        <measurement timestamp="1548713820000" avg="1.0" min="1.0" max="1.0" sum="463.0" count="463"/>
+                        <measurement timestamp="1548713880000" avg="1.0" min="1.0" max="1.0" sum="478.0" count="478"/>
+                        <measurement timestamp="1548713940000" avg="1.0" min="1.0" max="1.0" sum="479.0" count="479"/>
+                        <measurement timestamp="1548714000000" avg="1.0" min="1.0" max="1.0" sum="496.0" count="496"/>
+                        <measurement timestamp="1548714060000" avg="1.0" min="1.0" max="1.0" sum="500.0" count="500"/>
+                        <measurement timestamp="1548714120000" avg="1.0" min="1.0" max="1.0" sum="486.0" count="486"/>
+                        <measurement timestamp="1548714180000" avg="1.0" min="1.0" max="1.0" sum="472.0" count="472"/>
+                        <measurement timestamp="1548714240000" avg="1.0" min="1.0" max="1.0" sum="471.0" count="471"/>
+                        <measurement timestamp="1548714300000" avg="1.0" min="1.0" max="1.0" sum="481.0" count="481"/>
+                        <measurement timestamp="1548714360000" avg="1.0" min="1.0" max="1.0" sum="486.0" count="486"/>
+                        <measurement timestamp="1548714420000" avg="1.0" min="1.0" max="1.0" sum="495.0" count="495"/>
+                        <measurement timestamp="1548714480000" avg="1.0" min="1.0" max="1.0" sum="485.0" count="485"/>
+                        <measurement timestamp="1548714540000" avg="1.0" min="1.0" max="1.0" sum="475.0" count="475"/>
+                        <measurement timestamp="1548714600000" avg="1.0" min="1.0" max="1.0" sum="462.0" count="462"/>
+                        <measurement timestamp="1548714660000" avg="1.0" min="1.0" max="1.0" sum="493.0" count="493"/>
+                        <measurement timestamp="1548714720000" avg="1.0" min="1.0" max="1.0" sum="439.0" count="439"/>
+                        <measurement timestamp="1548714780000" avg="1.0" min="1.0" max="1.0" sum="486.0" count="486"/>
+                        <measurement timestamp="1548714840000" avg="1.0" min="1.0" max="1.0" sum="469.0" count="469"/>
+                        <measurement timestamp="1548714900000" avg="1.0" min="1.0" max="1.0" sum="467.0" count="467"/>
+                        <measurement timestamp="1548714960000" avg="1.0" min="1.0" max="1.0" sum="487.0" count="487"/>
+                        <measurement timestamp="1548715020000" avg="1.0" min="1.0" max="1.0" sum="492.0" count="492"/>
+                        <measurement timestamp="1548715080000" avg="1.0" min="1.0" max="1.0" sum="459.0" count="459"/>
+                        <measurement timestamp="1548715140000" avg="1.0" min="1.0" max="1.0" sum="484.0" count="484"/>
+                        <measurement timestamp="1548715200000" avg="1.0" min="1.0" max="1.0" sum="481.0" count="481"/>
+                        <measurement timestamp="1548715260000" avg="1.0" min="1.0" max="1.0" sum="456.0" count="456"/>
+                        <measurement timestamp="1548715320000" avg="1.0" min="1.0" max="1.0" sum="474.0" count="474"/>
+                        <measurement timestamp="1548715380000" avg="1.0" min="1.0" max="1.0" sum="499.0" count="499"/>
+                        <measurement timestamp="1548715440000" avg="1.0" min="1.0" max="1.0" sum="526.0" count="526"/>
+                        <measurement timestamp="1548715500000" avg="1.0" min="1.0" max="1.0" sum="534.0" count="534"/>
+                        <measurement timestamp="1548715560000" avg="1.0" min="1.0" max="1.0" sum="491.0" count="491"/>
+                        <measurement timestamp="1548715620000" avg="1.0" min="1.0" max="1.0" sum="509.0" count="509"/>
+                        <measurement timestamp="1548715680000" avg="1.0" min="1.0" max="1.0" sum="514.0" count="514"/>
+                        <measurement timestamp="1548715740000" avg="1.0" min="1.0" max="1.0" sum="521.0" count="521"/>
+                        <measurement timestamp="1548715800000" avg="1.0" min="1.0" max="1.0" sum="520.0" count="520"/>
+                        <measurement timestamp="1548715860000" avg="1.0" min="1.0" max="1.0" sum="520.0" count="520"/>
+                        <measurement timestamp="1548715920000" avg="1.0" min="1.0" max="1.0" sum="516.0" count="516"/>
+                    </measure>
+                </measure>
+            </measures>
+        </chartdashlet>
+        <chartdashlet name="response_time" description="" showabsolutevalues="false">
+            <measures structuretype="tree">
+                <measure measure="PurePath Response Time - PurePath Response Time - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06 (split by Agent)" aggregation="Average" avg="137.9559723561458" unit="ms">
+                    <measure measure="PurePath Response Time - ASO_MXQA_LVMMXCASJBNP06_SRVS_A02_10@lvmmxcasjbnp06" aggregation="Average" avg="137.9559723561458" unit="ms">
+                        <measurement timestamp="1548713100000" avg="9.593847794966264" min="0.3112800121307373"
+                                     max="855.728515625" sum="1688.5172119140625" count="176"/>
+                        <measurement timestamp="1548713160000" avg="3.7441033832097457" min="0.2468400001525879"
+                                     max="82.96623229980469" sum="662.706298828125" count="177"/>
+                        <measurement timestamp="1548713220000" avg="3.1609067049893467" min="0.3056339919567108"
+                                     max="76.89016723632812" sum="556.319580078125" count="176"/>
+                        <measurement timestamp="1548713280000" avg="4.320201785065407" min="0.3013400137424469"
+                                     max="219.94833374023438" sum="743.07470703125" count="172"/>
+                        <measurement timestamp="1548713340000" avg="164.40359288354898" min="0.25042399764060974"
+                                     max="17183.37890625" sum="88942.34375" count="541"/>
+                        <measurement timestamp="1548713400000" avg="155.30757364649682" min="0.2878440022468567"
+                                     max="2308.56494140625" sum="97533.15625" count="628"/>
+                        <measurement timestamp="1548713460000" avg="160.49132955490848" min="0.26878100633621216"
+                                     max="2699.834228515625" sum="96455.2890625" count="601"/>
+                        <measurement timestamp="1548713520000" avg="143.76745145173453" min="0.2701929807662964"
+                                     max="444.6266174316406" sum="95317.8203125" count="663"/>
+                        <measurement timestamp="1548713580000" avg="224.9252252509124" min="0.27367401123046875"
+                                     max="680.1119995117188" sum="246518.046875" count="1096"/>
+                        <measurement timestamp="1548713640000" avg="296.00081424079065" min="0.231905996799469"
+                                     max="2645.913330078125" sum="329448.90625" count="1113"/>
+                        <measurement timestamp="1548713700000" avg="150.58619146671828" min="0.2531120181083679"
+                                     max="2039.9896240234375" sum="97278.6796875" count="646"/>
+                        <measurement timestamp="1548713760000" avg="145.03241889312977" min="0.25810301303863525"
+                                     max="963.1094970703125" sum="94996.234375" count="655"/>
+                        <measurement timestamp="1548713820000" avg="154.23025139109697" min="0.2547190189361572"
+                                     max="2565.033447265625" sum="97010.828125" count="629"/>
+                        <measurement timestamp="1548713880000" avg="152.86282026397515" min="0.283627986907959"
+                                     max="2764.818603515625" sum="98443.65625" count="644"/>
+                        <measurement timestamp="1548713940000" avg="148.50142926356588" min="0.27088800072669983"
+                                     max="1873.4439697265625" sum="95783.421875" count="645"/>
+                        <measurement timestamp="1548714000000" avg="139.8074726208459" min="0.25354599952697754"
+                                     max="439.2159729003906" sum="92552.546875" count="662"/>
+                        <measurement timestamp="1548714060000" avg="143.4625469924812" min="0.26092100143432617"
+                                     max="460.6059265136719" sum="95402.59375" count="665"/>
+                        <measurement timestamp="1548714120000" avg="144.75678201687117" min="0.29027000069618225"
+                                     max="1592.2567138671875" sum="94381.421875" count="652"/>
+                        <measurement timestamp="1548714180000" avg="152.3519543495298" min="0.2759450078010559"
+                                     max="2979.418212890625" sum="97200.546875" count="638"/>
+                        <measurement timestamp="1548714240000" avg="158.53591051805338" min="0.29427799582481384"
+                                     max="2758.578369140625" sum="100987.375" count="637"/>
+                        <measurement timestamp="1548714300000" avg="145.70389779752705" min="0.27904200553894043"
+                                     max="2103.69091796875" sum="94270.421875" count="647"/>
+                        <measurement timestamp="1548714360000" avg="141.4250623082822" min="0.27242499589920044"
+                                     max="407.4527282714844" sum="92209.140625" count="652"/>
+                        <measurement timestamp="1548714420000" avg="149.45558339636915" min="0.2863290011882782"
+                                     max="4076.777587890625" sum="98790.140625" count="661"/>
+                        <measurement timestamp="1548714480000" avg="142.5661842357911" min="0.2868639826774597"
+                                     max="440.20843505859375" sum="92810.5859375" count="651"/>
+                        <measurement timestamp="1548714540000" avg="145.54504680187208" min="0.29426300525665283"
+                                     max="2531.26318359375" sum="93294.375" count="641"/>
+                        <measurement timestamp="1548714600000" avg="148.85836733678343" min="0.2658500075340271"
+                                     max="2318.31591796875" sum="93483.0546875" count="628"/>
+                        <measurement timestamp="1548714660000" avg="143.6100270295903" min="0.2607420086860657"
+                                     max="461.5703430175781" sum="94639.0078125" count="659"/>
+                        <measurement timestamp="1548714720000" avg="166.96213842975206" min="0.26207199692726135"
+                                     max="2836.940185546875" sum="101012.09375" count="605"/>
+                        <measurement timestamp="1548714780000" avg="145.41455377684048" min="0.27122998237609863"
+                                     max="411.163330078125" sum="94810.2890625" count="652"/>
+                        <measurement timestamp="1548714840000" avg="151.94184301181102" min="0.2691679894924164"
+                                     max="2779.062255859375" sum="96483.0703125" count="635"/>
+                        <measurement timestamp="1548714900000" avg="143.04174071879936" min="0.28211599588394165"
+                                     max="1277.346923828125" sum="90545.421875" count="633"/>
+                        <measurement timestamp="1548714960000" avg="141.11002105666157" min="0.2689319849014282"
+                                     max="440.5758361816406" sum="92144.84375" count="653"/>
+                        <measurement timestamp="1548715020000" avg="143.60721737481032" min="0.27074000239372253"
+                                     max="417.28204345703125" sum="94637.15625" count="659"/>
+                        <measurement timestamp="1548715080000" avg="152.1209875" min="0.24920400977134705"
+                                     max="3236.432373046875" sum="95075.6171875" count="625"/>
+                        <measurement timestamp="1548715140000" avg="156.11689903846153" min="0.2613149881362915"
+                                     max="4711.40478515625" sum="101475.984375" count="650"/>
+                        <measurement timestamp="1548715200000" avg="168.91156298299845" min="0.2973879873752594"
+                                     max="15674.447265625" sum="109285.78125" count="647"/>
+                        <measurement timestamp="1548715260000" avg="170.2726336414791" min="0.26625099778175354"
+                                     max="6931.19287109375" sum="105909.578125" count="622"/>
+                        <measurement timestamp="1548715320000" avg="147.236083984375" min="0.27209198474884033"
+                                     max="1958.4798583984375" sum="94231.09375" count="640"/>
+                        <measurement timestamp="1548715380000" avg="125.43528802710843" min="0.2726899981498718"
+                                     max="492.52349853515625" sum="83289.03125" count="664"/>
+                        <measurement timestamp="1548715440000" avg="109.98374368686869" min="0.2747800052165985"
+                                     max="396.2381286621094" sum="76218.734375" count="693"/>
+                        <measurement timestamp="1548715500000" avg="106.32497767857143" min="0.251679003238678"
+                                     max="428.0312805175781" sum="74427.484375" count="700"/>
+                        <measurement timestamp="1548715560000" avg="121.6027278348554" min="0.271930992603302"
+                                     max="1456.5081787109375" sum="79892.9921875" count="657"/>
+                        <measurement timestamp="1548715620000" avg="138.24649305555556" min="0.2671929895877838"
+                                     max="421.54168701171875" sum="93316.3828125" count="675"/>
+                        <measurement timestamp="1548715680000" avg="134.46263786764706" min="0.26098501682281494"
+                                     max="426.843505859375" sum="91434.59375" count="680"/>
+                        <measurement timestamp="1548715740000" avg="133.55302720160117" min="0.28169700503349304"
+                                     max="348.4626159667969" sum="91750.9296875" count="687"/>
+                        <measurement timestamp="1548715800000" avg="129.90140989431487" min="0.27498698234558105"
+                                     max="402.0982360839844" sum="89112.3671875" count="686"/>
+                        <measurement timestamp="1548715860000" avg="131.42605457361515" min="0.2585870027542114"
+                                     max="381.2833251953125" sum="90158.2734375" count="686"/>
+                        <measurement timestamp="1548715920000" avg="131.2076383797654" min="0.26806801557540894"
+                                     max="438.0793762207031" sum="89483.609375" count="682"/>
+                    </measure>
+                </measure>
+            </measures>
+        </chartdashlet>
+    </data>
+    <unreportable>
+        <dashlet>Response Time Hotspots</dashlet>
+    </unreportable>
+</dashboardreport>
